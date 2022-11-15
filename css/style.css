@@ -179,6 +179,7 @@ html {
           transition-duration: 0.4s;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  outline: 1px black solid;
 }
 
 .main__grid_item:hover {
