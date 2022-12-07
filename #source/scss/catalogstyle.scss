@@ -5,6 +5,10 @@
     background-color: black;
 }
 
+body{
+    
+    font-weight: 200;
+}
 .container {
     //border: 1px solid rgb(9, 255, 0); 
 
@@ -49,7 +53,6 @@
 .header__menu {
     //border: 1px solid rgb(55, 0, 255);
 
-
     width: 674px;
     margin: 0 307px 0 0;
     display: flex;
@@ -61,7 +64,6 @@
     font-size: 20px;
 }
 .header__menu_item {
-    
     a{
         color: white;
         transition-duration: 0.2s;
@@ -93,35 +95,30 @@
 
 .main{
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
+
 
     position: relative;
     top: 106px;
     background-color: white;
 }
 .sort {
-    width: 178px;
-    height: 45px;
-    border-radius: 11px;
-    color: black;
+    padding: 10px 20px;
     font-size: 18px;
-    background-color: #E6E6E6;
     position: relative;
     left: 100%;
     transform: translate(-100%, 0);
-
-    margin: 103px 0 70px 0;
-
-    &::after{
-        content: "+";
-        background: url(../img/catalog/down.png);
-        width: 15px;
-        height: 15px;
-        //position: relative;
-        //left: 10px;
-        //color: rgb(90, 90, 90);
-        //font-size: 14px;
-    }
+    margin: 103px 0 100px 0;
+    border-radius: 12px;
+    
+    font-weight: 200;
+}
+.dropdown-item{
+    line-height: 20px;
+    --bs-dropdown-link-active-bg: #F05F0D;
+}
+.dropdown-menu{
+    border-radius: 12px;
+    z-index: 1;
 }
 
 .main__flex {
@@ -129,15 +126,28 @@
     justify-content: space-between;
 }
 .main__filter {
-    border: 2px solid rgb(255, 0, 0);
+    //border: 2px solid rgb(255, 0, 0);
 
 
     height: 100vh;
     width: 316px;
 }
+.accordion{
+    position: relative;
+    z-index: 1;
+    --bs-accordion-active-bg: white;
+    --bs-accordion-active-color: black;
+    --bs-accordion-btn-focus-box-shadow: 0;
+}
+.accordion-body {
+    line-height: 30px;
+}
+.accordion-button{
+    font-size: 16px;
+}
 .main__content {
 
-    border: 2px solid rgb(255, 0, 0);
+    //border: 2px solid rgb(255, 0, 0);
 
 
     width: 942px;
@@ -153,17 +163,25 @@
     height: 600px;
     margin: 0 0 100px 0;
 }
+
 .griditem__image {
     width: 100%;
-    height: 60%;
+    height: 50%;
 }
 .griditem__image_1 {
     background: url(../img/catalog/doors/door1.png) 50% 0/auto 100% ;
+}
+.griditem__image_2 {
+    //background: url(../img/catalog/doors/door2.png) 50% 0/auto 100% ;
+}
+.griditem__image_3 {
+    background: url(../img/catalog/doors/door3.png) 50% 0/auto 100% ;
 }
 .griditem__title {
     text-align: center;
     font-size: 24px;
     margin: 10px 0 0 0;
+    
 }
 .griditem__rate {
     width: 100px;
@@ -176,6 +194,8 @@
     font-size: 28px;
     text-align: center;
     margin: 26px 0 0 0;
+    
+    font-weight: 400;
 }
 .griditem__button {
     width: 200px;
@@ -259,3 +279,4 @@ footer{
         //border: 1px solid rgb(255, 255, 255);
     }
 }
+

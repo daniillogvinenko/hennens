@@ -3,14 +3,21 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
-        
-        
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">        
+
+
         <link rel="stylesheet" href="css/catalogstyle.css">
         <title>Hennen's</title>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
     </head>
     <body>
+        
+        
+
+
+
         <div class="wrapper">
             <div class="header">
                 <div class="container">
@@ -50,65 +57,132 @@
             
             <div class="main">
                 <div class="container">
-                    <button class="sort">Сортировать</button>
+                    <div class="dropdown">
+                        <button class="sort btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Сортировать
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">По убыванию цены</a></li>
+                          <li><a class="dropdown-item" href="#">По возрастанию цены</a></li>
+                          <li><a class="dropdown-item" href="#">По популярным</a></li>
+                        </ul>
+                      </div>
                     <div class="main__flex">
-                        <div class="main__filter"></div>
+                        <div class="main__filter">
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                      Цвет
+                                    </button>
+                                  </h2>
+                                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <input checked type="checkbox" name="1"> Все <br>
+                                        <input type="checkbox" name="1"> Зеленый <br>
+                                        <input type="checkbox" name="1"> Дуб натуральный <br>
+                                        <input type="checkbox" name="1"> Коричневый <br>
+                                        <input type="checkbox" name="1"> Светло-коричневый <br>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                      Стиль
+                                    </button>
+                                  </h2>
+                                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        <input checked type="checkbox" name="1"> Все <br>
+                                        <input type="checkbox" name="1"> Современный <br>
+                                        <input type="checkbox" name="1"> Классический <br>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                      Остекление
+                                    </button>
+                                  </h2>
+                                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <input checked type="checkbox" name="1"> Все <br>
+                                        <input type="checkbox" name="1"> Современный <br>
+                                        <input type="checkbox" name="1"> Классический
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                        Покрытие
+                                      </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                                      <div class="accordion-body">
+                                          <input type="checkbox" name="1"> Master Foil <br>
+                                          <input type="checkbox" name="1"> Unilack <br>
+                                          <input type="checkbox" name="1"> SPFTTOUCH <br>
+                                          <input type="checkbox" name="1"> Глянец <br>                                          
+                                          <input type="checkbox" name="1"> ПВХ
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>                         
+                        </div>
+
                         <div class="main__content">
                             <div class="main__griditem griditem">
-                                <div class="griditem__image griditem__image_1"></div>
+                                <a href="product.html"><div class="griditem__image griditem__image_1"></div></a>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href=""><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
+                            </div>
+                            
+                            <div class="main__griditem griditem">
+                                <a href="product.html"><div class="griditem__image griditem__image_3"></div></a>
+                                <div class="griditem__title">Дверь "Д68"</div>
+                                <div class="griditem__rate  griditem__rate_1"></div>
+                                <div class="griditem__price">16 000 р/шт</div>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             <div class="main__griditem griditem">
                                 <div class="griditem__image griditem__image_1"></div>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             <div class="main__griditem griditem">
                                 <div class="griditem__image griditem__image_1"></div>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             <div class="main__griditem griditem">
                                 <div class="griditem__image griditem__image_1"></div>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             <div class="main__griditem griditem">
                                 <div class="griditem__image griditem__image_1"></div>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             <div class="main__griditem griditem">
                                 <div class="griditem__image griditem__image_1"></div>
                                 <div class="griditem__title">Дверь "Д66"</div>
                                 <div class="griditem__rate  griditem__rate_1"></div>
                                 <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
-                            </div>
-                            <div class="main__griditem griditem">
-                                <div class="griditem__image griditem__image_1"></div>
-                                <div class="griditem__title">Дверь "Д66"</div>
-                                <div class="griditem__rate  griditem__rate_1"></div>
-                                <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
-                            </div>
-                            <div class="main__griditem griditem">
-                                <div class="griditem__image griditem__image_1"></div>
-                                <div class="griditem__title">Дверь "Д66"</div>
-                                <div class="griditem__rate  griditem__rate_1"></div>
-                                <div class="griditem__price">15 000 р/шт</div>
-                                <a href="#"><div class="griditem__button">Подробнее</div></a>
+                                <a href="product.html"><div class="griditem__button">Подробнее</div></a>
                             </div>
                             
                         </div>
@@ -150,8 +224,9 @@
                 </div>
             </footer>
 
-            
 
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
             <script src="js/script.js"></script>
         </div>
     </body>
