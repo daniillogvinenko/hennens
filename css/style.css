@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__cart img {
   width: 37px;
+  fill: #F05F0D;
 }
 
 .header__cart:hover {
@@ -239,6 +240,7 @@ footer {
 .footer__logo {
   margin: 0 122px 0 0;
   width: 220px;
+  fill: #F05F0D;
 }
 
 .footer__contacts {
